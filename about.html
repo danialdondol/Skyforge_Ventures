@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Skyforge Ventures - 3D Printing & Technology Education</title>
+  <meta name="description" content="Learn about Skyforge Ventures - our mission, vision, and commitment to excellence in 3D printing services and technology education." />
+  <meta name="keywords" content="about skyforge ventures, 3D printing company, technology education, mission, vision" />
+  <link rel="canonical" href="https://skyforgeventures.com/about" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+   
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #000;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+    }
+    
+/* HEADER & NAVIGATION */
+    .navbar {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      border-bottom: 2px solid #4cb0ad;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 70px;
+      margin-right: 15px;
+    }
+
+    .logo h1 {
+      font-size: 28px;
+      margin: 0;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      color: white;
+    }
+
+    .navbar .links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #4cb0ad;
+      transform: translateY(-2px);
+    }
+
+    .navbar a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #4cb0ad, #3ab6b2);
+      border-radius: 2px;
+    }
+
+    .contact-btn {
+      background: transparent;
+      padding: 12px 24px;
+      border: 2px solid white;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-btn:hover {
+      background: white;
+      color: #4cb0ad;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+    }
+
+    /* TEAM MEMBERS SECTION */
+
+    .team {
+      padding: 60px 20px;
+      background-color: #4cb0ad;
+      text-align: center;
+      color: black;
+    }
+
+    .team h2 {
+      margin-bottom: 40px;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 200px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    /* CONTENT SECTIONS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #4cb0ad 0%, #3ab6b2 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      margin-bottom: 24px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-section p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-section {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .content-section:nth-child(even) {
+      background: #f8f8f8;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: #4cb0ad;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .vision-mission {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 60px;
+      margin-bottom: 80px;
+    }
+
+    .vision-card, .mission-card {
+      background: linear-gradient(135deg, white, #fafafa);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-left: 6px solid #4cb0ad;
+    }
+
+    .vision-card:hover, .mission-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    .vision-card h3, .mission-card h3 {
+      color: #4cb0ad;
+      font-size: 2.2rem;
+      margin-bottom: 24px;
+      border-bottom: 3px solid #4cb0ad;
+      padding-bottom: 12px;
+    }
+
+    .vision-card p, .mission-card p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin: 80px 0;
+    }
+
+    .stat-card {
+      text-align: center;
+      background: linear-gradient(135deg, white, #fafafa);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #4cb0ad;
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-content h3 {
+      color: #4cb0ad;
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+
+    .about-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 32px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 80px;
+    }
+
+    .value-card {
+      background: linear-gradient(135deg, #4cb0ad, #3ab6b2);
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(76, 176, 173, 0.3);
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(76, 176, 173, 0.4);
+    }
+
+    .value-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .value-card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* FOOTER NAV */
+    .footer-nav {
+      background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+      color: white;
+      padding: 60px 20px 32px;
+    }
+
+    .footer-nav-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-address, .footer-links, .footer-social {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .footer-address h3,
+    .footer-links h3,
+    .footer-social h3 {
+      color: #4cb0ad;
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+      border-bottom: 3px solid #4cb0ad;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .footer-address p {
+      margin-bottom: 12px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 16px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+
+    .footer-links a:hover {
+      color: #4cb0ad;
+      transform: translateX(10px);
+    }
+
+    .footer-social p {
+      margin-bottom: 16px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .footer-social a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      display: block;
+    }
+
+    .footer-social a:hover {
+      color: #4cb0ad;
+    }
+
+    .footer-social a i {
+      margin-right: 8px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+      color: #ddd;
+      padding: 24px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.8rem;
+      }
+
+      .vision-mission {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-nav-container {
+        flex-direction: column;
+      }
+
+      .navbar .links {
+        gap: 20px;
+      }
+
+      .navbar a {
+        font-size: 13px;
+      }
+
+      .contact-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .content-section {
+        padding: 60px 20px;
+      }
+    }
+
+/* TEAM HIERARCHY */
+.team-hierarchy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.team-hierarchy .mid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-hierarchy .bottom {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-member {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.images {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.images img {
+  width: 33.33%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #4cb0ad;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- HEADER & NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./FOOTAGE/HOME.jpeg" alt="Skyforge Logo">
+      <h1>SKYFORGE<br>VENTURES</h1>
+    </div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="about.html" class="active">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="training.html">TRAINING</a>
+    </div>
+    <a href="contact.html" class="contact-btn">CONTACT US</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <h1>About Skyforge Ventures</h1>
+        <p>Leading the future of 3D printing and technology education with innovation, expertise, and dedication to excellence</p>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="content-section">
+      <div class="container">
+        <div class="vision-mission">
+          <article class="vision-card">
+            <h3>Our Vision</h3>
+            <p>To democratize access to advanced manufacturing technologies and empower the next generation of innovators through comprehensive education and cutting-edge 3D printing solutions. We envision a world where every creative idea can be transformed into reality through accessible, professional-grade technology services.</p>
+          </article>
+          <article class="mission-card">
+            <h3>Our Mission</h3>
+            <p>We bridge the gap between imagination and reality by providing professional 3D printing services, expert design consultation, and hands-on technology education that transforms ideas into tangible innovations. Our commitment is to deliver excellence while fostering learning and creativity in every project.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-hierarchy">
+      <div class="top">
+        <div class="team-member">
+          <div class="carousel">
+            <div class="images">
+              <img src="./TEAM_PIC/dol_3.jpeg" alt="Danial">
+              <img src="./TEAM_PIC/dol_2.jpeg" alt="Danial">
+              <img src="./TEAM_PIC/dol_1.jpeg" alt="Danial">
+            </div>
+            <div class="dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+          <h3>Danial</h3>
+          <p>CEO & Developer</p>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="team-member">
+          <div class="carousel">
+            <div class="images">
+              <img src="./TEAM_PIC/amin_1.jpeg" alt="Dondol">
+              <img src="./TEAM_PIC/amin_2.jpeg" alt="Dondol">
+              <img src="./TEAM_PIC/amin_3.jpeg" alt="Dondol">
+            </div>
+            <div class="dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+          <h3>Amin</h3>
+          <p>Financial & 3D Designer</p>
+        </div>
+        <div class="team-member">
+          <div class="carousel">
+            <div class="images">
+              <img src="./TEAM_PIC/shua_1.jpeg" alt="Ginger">
+              <img src="./TEAM_PIC/shua_2.jpeg" alt="Ginger">
+              <img src="./TEAM_PIC/shua_3.jpeg" alt="Ginger">
+            </div>
+            <div class="dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+          <h3>Nasuhah</h3>
+          <p>Data Analyst & Engineer</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="team-member">
+          <div class="carousel">
+            <div class="images">
+              <img src="./TEAM_PIC/ati_1.jpeg" alt="Alex">
+              <img src="./TEAM_PIC/ati_3.jpeg" alt="Alex">
+              <img src="./TEAM_PIC/ati_4.jpeg" alt="Alex">
+            </div>
+            <div class="dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+          <h3>Ezzati</h3>
+          <p>Operations Manager & IT</p>
+        </div>
+        <div class="team-member">
+          <div class="carousel">
+            <div class="images">
+              <img src="./TEAM_PIC/pek_1.jpeg" alt="Sarah">
+              <img src="./TEAM_PIC/pek_2.jpeg" alt="Sarah">
+              <img src="./TEAM_PIC/pek_3.jpeg" alt="Sarah">
+            </div>
+            <div class="dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+          <h3>Taufiq</h3>
+          <p>IoT Trainer & Editor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- STATS SECTION -->
+    <section class="content-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Impact in Numbers</h2>
+          <p>Years of dedicated service and continuous growth in the 3D printing and technology education industry</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">300+</div>
+            <div class="stat-label">Students Trained</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="content-section">
+      <div class="container">
+        <div class="about-content">
+          <h3>Why Choose Skyforge Ventures?</h3>
+          <p>
+            With years of experience in 3D printing technology and education, we combine technical expertise with creative innovation. 
+            Our team of skilled engineers and educators is passionate about helping you bring your ideas to life, whether you're a 
+            student, entrepreneur, or established business looking to leverage the power of additive manufacturing.
+          </p>
+          <p>
+            We pride ourselves on staying at the forefront of technological advancement, continuously updating our equipment, 
+            knowledge, and methodologies to provide the best possible service to our clients. From rapid prototyping to final 
+            production parts, from basic 3D printing workshops to advanced IoT development courses, we cover the complete spectrum 
+            of modern manufacturing and technology education needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES SECTION -->
+    <section class="content-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Core Values</h2>
+          <p>The principles that guide everything we do at Skyforge Ventures</p>
+        </div>
+        
+        <div class="values-grid">
+          <article class="value-card">
+            <h4>Innovation</h4>
+            <p>We constantly push the boundaries of what's possible with 3D printing technology and creative problem-solving approaches.</p>
+          </article>
+          <article class="value-card">
+            <h4>Quality</h4>
+            <p>Every project receives our full attention to detail, ensuring exceptional results that exceed expectations.</p>
+          </article>
+          <article class="value-card">
+            <h4>Education</h4>
+            <p>We believe in empowering others through knowledge sharing and hands-on learning experiences.</p>
+          </article>
+          <article class="value-card">
+            <h4>Collaboration</h4>
+            <p>Working closely with our clients to understand their needs and deliver personalized solutions.</p>
+          </article>
+          <article class="value-card">
+            <h4>Sustainability</h4>
+            <p>Committed to environmentally responsible practices and sustainable manufacturing solutions.</p>
+          </article>
+          <article class="value-card">
+            <h4>Excellence</h4>
+            <p>Striving for perfection in every aspect of our service delivery and client relationships.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER NAV -->
+  <section class="footer-nav">
+    <div class="footer-nav-container">
+      <div class="footer-address">
+        <h3>SKYFORGE VENTURES</h3>
+        <p> 4, Jalan Tengku Ampuan Zabedah D 9/D, Seksyen 9, 40100 Shah Alam, Selangor</p>
+        <p>Business Hours: Monday - Friday, 9:00 AM - 5:00 PM</p>
+        <p>Email: support@skyforgeventures.com.my</p>
+        <p>Phone: +603-7654 3210</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="training.html">TRAINING</a>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Connect With Us</h3>
+        <p>Ready to bring your ideas to life?</p>
+        <p>Let's discuss your project today!</p>
+        <a href="https://www.instagram.com/venturesskyforge" target="_blank"><i class="fab fa-instagram"></i> @venturesskyforge</a>
+        <a href="https://www.tiktok.com/@skyforge.ventures" target="_blank"><i class="fab fa-tiktok"></i> @skyforge.ventures</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Skyforge Ventures | All Rights Reserved | Professional 3D Printing & Technology Education</p>
+  </footer>
+
+  <script>
+    // Add smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s ease-in-out';
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    // Animate stats on scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumber = entry.target.querySelector('.stat-number');
+          if (statNumber && !statNumber.classList.contains('animated')) {
+            animateNumber(statNumber);
+            statNumber.classList.add('animated');
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.stat-card').forEach(card => {
+      observer.observe(card);
+    });
+
+    function animateNumber(element) {
+      const target = parseFloat(element.textContent);
+      const suffix = element.textContent.replace(/[0-9.]/g, '');
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + suffix;
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current) + suffix;
+        }
+      }, 30);
+    }
+
+    // Carousel functionality
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const images = carousel.querySelector('.images');
+      const dots = carousel.querySelectorAll('.dot');
+      
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          // Remove active class from all dots
+          dots.forEach(d => d.classList.remove('active'));
+          // Add active to clicked dot
+          dot.classList.add('active');
+          // Move images
+          const slide = parseInt(dot.getAttribute('data-slide'));
+          images.style.transform = `translateX(-${slide * 33.33}%)`;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Skyforge Ventures - 3D Printing & Technology Education</title>
+  <meta name="description" content="Get in touch with Skyforge Ventures for inquiries about our 3D printing services, technology education, and collaborations." />
+  <meta name="keywords" content="contact skyforge ventures, 3D printing services, technology education, support" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #000;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+    }
+
+    /* HEADER & NAVIGATION */
+    .navbar {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      border-bottom: 2px solid #4cb0ad;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 70px;
+      margin-right: 15px;
+    }
+
+    .logo h1 {
+      font-size: 28px;
+      margin: 0;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      color: white;
+    }
+
+    .navbar .links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #4cb0ad;
+      transform: translateY(-2px);
+    }
+
+    .navbar a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #4cb0ad, #3ab6b2);
+      border-radius: 2px;
+    }
+
+    .contact-btn {
+      background: transparent;
+      padding: 12px 24px;
+      border: 2px solid white;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-btn:hover {
+      background: white;
+      color: #4cb0ad;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+    }
+
+    /* PAGE HERO - Similar to homepage hero */
+    .page-hero {
+      background: linear-gradient(135deg, rgba(76, 176, 173, 0.95), rgba(58, 182, 178, 0.95)), 
+                  linear-gradient(45deg, #4cb0ad 25%, transparent 25%), 
+                  linear-gradient(-45deg, #4cb0ad 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #3ab6b2 75%), 
+                  linear-gradient(-45deg, transparent 75%, #3ab6b2 75%);
+      background-size: 60px 60px;
+      background-position: 0 0, 0 0, 0 0, 30px 30px, 30px 30px;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(76, 176, 173, 0.8), rgba(58, 182, 178, 0.9));
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .page-hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CONTACT SECTION - Using homepage section styling */
+    .contact-section {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+      padding: 100px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    /* FORM STYLING - Match homepage card style */
+    .contact-form {
+      flex: 1;
+      max-width: 500px;
+      background: linear-gradient(135deg, white, #fafafa);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-left: 5px solid #4cb0ad;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-form:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .contact-form h3 {
+      color: #4cb0ad;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fafafa;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #4cb0ad;
+      background: white;
+      outline: none;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(76, 176, 173, 0.2);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background: linear-gradient(135deg, #4cb0ad, #3ab6b2);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 5px 15px rgba(76, 176, 173, 0.3);
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(135deg, #3ab6b2, #2e8c89);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(76, 176, 173, 0.4);
+    }
+
+    /* CONTACT INFO - Match homepage card style */
+    .contact-info {
+      flex: 1;
+      max-width: 400px;
+      background: linear-gradient(135deg, white, #fafafa);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-left: 5px solid #4cb0ad;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-info:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .contact-info h3 {
+      color: #4cb0ad;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .contact-info-item {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(76, 176, 173, 0.05), rgba(58, 182, 178, 0.05));
+      border-radius: 12px;
+      border-left: 3px solid #4cb0ad;
+    }
+
+    .contact-info-item h4 {
+      color: #4cb0ad;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .contact-info-item p {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* FOOTER NAV - Same as homepage */
+    .footer-nav {
+      background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+      color: white;
+      padding: 60px 20px 32px;
+    }
+
+    .footer-nav-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-address, .footer-links, .footer-social {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .footer-address h3,
+    .footer-links h3,
+    .footer-social h3 {
+      color: #4cb0ad;
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+      border-bottom: 3px solid #4cb0ad;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .footer-address p {
+      margin-bottom: 12px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 16px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+
+    .footer-links a:hover {
+      color: #4cb0ad;
+      transform: translateX(10px);
+    }
+
+    .footer-social p {
+      margin-bottom: 16px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .footer-social a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      display: block;
+    }
+
+    .footer-social a:hover {
+      color: #4cb0ad;
+    }
+
+    .footer-social a i {
+      margin-right: 8px;
+    }
+
+    /* FOOTER - Same as homepage */
+    .footer {
+      background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+      color: #ddd;
+      padding: 24px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .page-hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .contact-wrapper,
+      .footer-nav-container {
+        flex-direction: column;
+      }
+
+      .navbar .links {
+        gap: 20px;
+      }
+
+      .navbar a {
+        font-size: 13px;
+      }
+
+      .contact-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .page-hero {
+        padding: 80px 20px;
+      }
+
+      .contact-section {
+        padding: 80px 20px;
+      }
+
+      .contact-form,
+      .contact-info {
+        max-width: 100%;
+      }
+    }
+
+    /* EMAIL LINKS */
+a[href^="mailto:"] {
+  color: #4cb0ad;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a[href^="mailto:"]:hover {
+  text-decoration: underline;
+  color: #3ab6b2;
+}
+
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./FOOTAGE/HOME.jpeg" alt="Skyforge Logo">
+      <h1>SKYFORGE<br>VENTURES</h1>
+    </div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="training.html">TRAINING</a>
+    </div>
+    <a href="#contact-form" class="contact-btn">CONTACT US</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Get In Touch</h1>
+      <p>Ready to bring your ideas to life? Let's discuss your project and transform your vision into reality</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Form -->
+          <form class="contact-form" action="#" method="post">
+            <h3>Send Us a Message</h3>
+            
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            
+            <div class="contact-info-item">
+              <h4>📧 Email</h4>
+              <p>support@skyforgeventures.com.my</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>📞 Phone</h4>
+              <p>+603-7654 3210</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>📍 Location</h4>
+              <p>4, Jalan Tengku Ampuan Zabedah D 9/D, Seksyen 9, 40100 Shah Alam, Selangor</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>🕒 Business Hours</h4>
+              <p>Monday - Friday: 9AM - 5PM<br>Saturday: Closed <br>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER NAV -->
+  <section class="footer-nav">
+    <div class="footer-nav-container">
+      <div class="footer-address">
+        <h3>SKYFORGE VENTURES</h3>
+        <p> 4, Jalan Tengku Ampuan Zabedah D 9/D, Seksyen 9, 40100 Shah Alam, Selangor</p>
+        <p>Business Hours: Monday - Friday, 9:00 AM - 5:00 PM</p>
+        <p>Email: support@skyforgeventures.com.my</p>
+        <p>Phone: +603-7654 3210</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="training.html">TRAINING</a>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Connect With Us</h3>
+        <p>Ready to bring your ideas to life?</p>
+        <p>Let's discuss your project today!</p>
+        <a href="https://www.instagram.com/venturesskyforge" target="_blank"><i class="fab fa-instagram"></i> @venturesskyforge</a>
+        <a href="https://www.tiktok.com/@skyforge.ventures" target="_blank"><i class="fab fa-tiktok"></i> @skyforge.ventures</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Skyforge Ventures | All Rights Reserved | Professional 3D Printing & Technology Education</p>
+  </footer>
+
+  <script>
+    // Add smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s ease-in-out';
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    // Form submission handling
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+    });
+  </script>
+</body>
+</html>

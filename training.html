@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Programs | Skyforge Ventures - Technology Education</title>
+  <meta name="description" content="Comprehensive technology training programs at Skyforge Ventures. Learn 3D printing, IoT development, CAD design, and STEM education from industry experts." />
+  <meta name="keywords" content="3D printing training, IoT workshops, CAD design courses, STEM education, technology training programs" />
+  <link rel="canonical" href="https://skyforgeventures.com/training" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #000;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+    }
+
+      
+/* HEADER & NAVIGATION */
+    .navbar {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      border-bottom: 2px solid #4cb0ad;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 70px;
+      margin-right: 15px;
+    }
+
+    .logo h1 {
+      font-size: 28px;
+      margin: 0;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      color: white;
+    }
+
+
+    .navbar .links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #4cb0ad;
+      transform: translateY(-2px);
+    }
+
+    .navbar a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #4cb0ad, #3ab6b2);
+      border-radius: 2px;
+    }
+
+    .contact-btn {
+      background: transparent;
+      padding: 12px 24px;
+      border: 2px solid white;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-btn:hover {
+      background: white;
+      color: #4cb0ad;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+    }
+
+    /* CONTENT SECTIONS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #4cb0ad 0%, #3ab6b2 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      margin-bottom: 24px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-section p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .training-section {
+      padding: 100px 20px;
+      background: white;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.8rem;
+      color: #4cb0ad;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .section-header p {
+      font-size: 1.3rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .training-card {
+      background: linear-gradient(135deg, white, #fafafa);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-left: 6px solid #4cb0ad;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .training-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #4cb0ad, #3ab6b2);
+    }
+
+    .training-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    .training-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .training-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .training-card h3 {
+      color: #4cb0ad;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .training-card p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-size: 1.1rem;
+    }
+
+    .training-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+    }
+
+    .training-features li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 30px;
+      color: #666;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+    }
+
+    .training-features li:before {
+      content: "✓";
+      color: #4cb0ad;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    .training-features li:hover {
+      color: #4cb0ad;
+      transform: translateX(5px);
+    }
+
+    .training-info {
+      background: linear-gradient(135deg, #f8f8f8, #f0f0f0);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .training-info h4 {
+      color: #4cb0ad;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px;
+    }
+
+    .info-item {
+      text-align: center;
+    }
+
+    .info-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-weight: bold;
+      color: #4cb0ad;
+      font-size: 1rem;
+    }
+
+    .benefits-section {
+      background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+      padding: 100px 20px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .benefit-card {
+      background: linear-gradient(135deg, white, #fafafa);
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-top: 4px solid #4cb0ad;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .benefit-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #4cb0ad, #3ab6b2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .benefit-card h4 {
+      color: #4cb0ad;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .benefit-card p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #4cb0ad 0%, #3ab6b2 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cta-section h3 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, white, #f0f0f0);
+      color: #4cb0ad;
+      padding: 18px 36px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn:hover {
+      background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+
+    /* FOOTER NAV */
+    .footer-nav {
+      background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+      color: white;
+      padding: 60px 20px 32px;
+    }
+
+    .footer-nav-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-address, .footer-links, .footer-social {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .footer-address h3,
+    .footer-links h3,
+    .footer-social h3 {
+      color: #4cb0ad;
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+      border-bottom: 3px solid #4cb0ad;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .footer-address p {
+      margin-bottom: 12px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 16px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+
+    .footer-links a:hover {
+      color: #4cb0ad;
+      transform: translateX(10px);
+    }
+
+    .footer-social p {
+      margin-bottom: 16px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .footer-social a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      display: block;
+    }
+
+    .footer-social a:hover {
+      color: #4cb0ad;
+    }
+
+    .footer-social a i {
+      margin-right: 8px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+      color: #ddd;
+      padding: 24px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.8rem;
+      }
+
+      .training-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-nav-container {
+        flex-direction: column;
+      }
+
+      .navbar .links {
+        gap: 20px;
+      }
+
+      .navbar a {
+        font-size: 13px;
+      }
+
+      .contact-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .training-section,
+      .benefits-section {
+        padding: 80px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./FOOTAGE/HOME.jpeg" alt="Skyforge Logo">
+      <h1>SKYFORGE<br>VENTURES</h1>
+    </div>
+    <div class="links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="training.html" class="active">TRAINING</a>
+    </div>
+    <a href="contact.html" class="contact-btn">CONTACT US</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <h1>Training Programs</h1>
+        <p>Comprehensive technology education designed to build tomorrow's innovators and empower the next generation of creators</p>
+      </div>
+    </section>
+
+    <!-- TRAINING PROGRAMS -->
+    <section class="training-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Training Programs</h2>
+          <p>Professional courses designed to equip you with cutting-edge skills in 3D printing, IoT development, and modern technology</p>
+        </div>
+        
+        <div class="training-grid">
+          <article class="training-card">
+            <img src="./FOOTAGE/FDM.jpg" alt="3D Printing Fundamentals Course">
+            <h3>3D Printing Fundamentals</h3>
+            <p>Master the basics of 3D printing technology, from printer operation to material selection and quality optimization. Perfect for beginners and professionals looking to expand their skills.</p>
+            <ul class="training-features">
+              <li>Equipment operation and maintenance</li>
+              <li>Material properties and selection</li>
+              <li>Print troubleshooting techniques</li>
+              <li>Quality control and optimization</li>
+              <li>Safety protocols and best practices</li>
+            </ul>
+            <div class="training-info">
+              <h4>Course Details</h4>
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-label">Duration</div>
+                  <div class="info-value">4 Weeks</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Level</div>
+                  <div class="info-value">Beginner</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Format</div>
+                  <div class="info-value">Hands-on</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Certificate</div>
+                  <div class="info-value">Yes</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="training-card">
+            <img src="./FOOTAGE/CADDES.jpg" alt="CAD Design Mastery Course">
+            <h3>CAD Design Mastery</h3>
+            <p>Learn professional 3D modeling and design software to create printable models and engineering drawings. From basic sketching to advanced parametric design.</p>
+            <ul class="training-features">
+              <li>Software proficiency (Fusion 360, SolidWorks)</li>
+              <li>3D modeling and design principles</li>
+              <li>Model optimization for 3D printing</li>
+              <li>Technical drawing and documentation</li>
+              <li>Assembly design and simulation</li>
+            </ul>
+            <div class="training-info">
+              <h4>Course Details</h4>
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-label">Duration</div>
+                  <div class="info-value">6 Weeks</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Level</div>
+                  <div class="info-value">Intermediate</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Format</div>
+                  <div class="info-value">Lab-based</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Certificate</div>
+                  <div class="info-value">Professional</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="training-card">
+            <img src="./FOOTAGE/IOTDEV.jpg" alt="IoT Development Workshop">
+            <h3>IoT Development Workshop</h3>
+            <p>Hands-on Internet of Things training covering sensors, microcontrollers, connectivity, and data visualization. Build real smart devices and learn cloud integration.</p>
+            <ul class="training-features">
+              <li>Hardware programming (Arduino, Raspberry Pi)</li>
+              <li>Sensor integration and data collection</li>
+              <li>Wireless communication protocols</li>
+              <li>Cloud connectivity and data analytics</li>
+              <li>Mobile app development for IoT</li>
+            </ul>
+            <div class="training-info">
+              <h4>Course Details</h4>
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-label">Duration</div>
+                  <div class="info-value">8 Weeks</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Level</div>
+                  <div class="info-value">Advanced</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Format</div>
+                  <div class="info-value">Project-based</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Certificate</div>
+                  <div class="info-value">Industry</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="training-card">
+            <img src="./FOOTAGE/STEM.png" alt="STEM Education Programs">
+            <h3>STEM Education Programs</h3>
+            <p>Structured programs for schools and educational institutions to integrate modern technology into curriculum. Train educators and inspire students.</p>
+            <ul class="training-features">
+              <li>Curriculum integration strategies</li>
+              <li>Teacher training and development</li>
+              <li>Student workshop facilitation</li>
+              <li>Project-based learning methods</li>
+              <li>Assessment and evaluation tools</li>
+            </ul>
+            <div class="training-info">
+              <h4>Course Details</h4>
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-label">Duration</div>
+                  <div class="info-value">Custom</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Level</div>
+                  <div class="info-value">All Levels</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Format</div>
+                  <div class="info-value">Workshop</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Certificate</div>
+                  <div class="info-value">Educational</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Our Training?</h2>
+          <p>Experience the difference of learning from industry experts with hands-on, practical training methods</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">👨‍🏫</div>
+            <h4>Expert Instructors</h4>
+            <p>Learn from industry professionals with years of real-world experience in 3D printing, IoT development, and technology education.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🛠️</div>
+            <h4>Hands-On Learning</h4>
+            <p>Practical, project-based training with access to professional-grade equipment and cutting-edge technology in our state-of-the-art facilities.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🏆</div>
+            <h4>Industry Certification</h4>
+            <p>Earn recognized certifications that validate your skills and enhance your professional credibility in the technology industry.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">👥</div>
+            <h4>Small Class Sizes</h4>
+            <p>Personalized attention with small class sizes ensuring every student receives individual guidance and support throughout their learning journey.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🚀</div>
+            <h4>Career Support</h4>
+            <p>Ongoing career guidance, job placement assistance, and networking opportunities to help you advance in your technology career.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🔄</div>
+            <h4>Lifetime Access</h4>
+            <p>Lifetime access to course materials, updates, and our alumni network to keep your skills current with evolving technology trends.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+      <div class="container">
+        <h3>Ready to Start Learning?</h3>
+        <p>Join our next training session and unlock your potential in 3D printing and IoT technology. Transform your career with cutting-edge skills.</p>
+        <a href="contact.html" class="cta-btn">Enroll Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER NAV -->
+  <section class="footer-nav">
+    <div class="footer-nav-container">
+      <div class="footer-address">
+        <h3>SKYFORGE VENTURES</h3>
+        <p> 4, Jalan Tengku Ampuan Zabedah D 9/D, Seksyen 9, 40100 Shah Alam, Selangor</p>
+        <p>Business Hours: Monday - Friday, 9:00 AM - 5:00 PM</p>
+        <p>Email: support@skyforgeventures.com.my</p>
+        <p>Phone: +603-7654 3210</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="training.html">TRAINING</a>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Connect With Us</h3>
+        <p>Ready to bring your ideas to life?</p>
+        <p>Let's discuss your project today!</p>
+        <a href="https://www.instagram.com/venturesskyforge" target="_blank"><i class="fab fa-instagram"></i> @venturesskyforge</a>
+        <a href="https://www.tiktok.com/@skyforge.ventures" target="_blank"><i class="fab fa-tiktok"></i> @skyforge.ventures</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Skyforge Ventures | All Rights Reserved | Professional 3D Printing & Technology Education</p>
+  </footer>
+
+  <script>
+    // Add smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s ease-in-out';
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    // Add staggered animation for training cards
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.animation = 'slideInUp 0.6s ease-out forwards';
+          }, index * 150);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.training-card, .benefit-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(50px)';
+      observer.observe(card);
+    });
+
+    // Add CSS for slide in animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
